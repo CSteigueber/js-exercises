@@ -32,12 +32,18 @@ const extras = [
     title : "Supplement Atmos"
   }
 ];
+var combo=[]
 
-
-const wrapWithTag = (content, tag) => `<${tag}>${content.title} :${content.price}</${tag}>`;
+const wrapWithTag = (content, tag="li") => `<${tag}>${content.title} :${content.price}</${tag}>`;
+const wrapMultiTag = (cont1,cont2,tag="li") => `<${tag}>${cont1.title} with ${cont2.title} :${cont1.price+cont2.price}</${tag}>`;
 console.table(fees);
 
-var wrappedFees= fees.map(fee => wrapWithTag(fee,`li`));
+var wrappedFees= fees.map(fee => wrapWithTag(fee));
 console.log(wrappedFees);
 //console.log(list);
-document.write("<ul>",wrappedFees,"</ul>");
+document.write("<ul>",wrappedFees.join(" "),"</ul>");
+for (let i=0; i<3; i++){
+ combo[i]=wrapMultiTag(fees[i],extras[i]);
+}
+console.log(combo)
+document.write("<ul>",combo.join(" "),"</ul>");
