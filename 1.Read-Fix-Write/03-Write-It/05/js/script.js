@@ -32,3 +32,12 @@ const extras = [
     title : "Supplement Atmos"
   }
 ];
+
+
+const wrapWithTag = (content, tag) => `<${tag}>${content.title} :${content.price}</${tag}>`;
+console.table(fees);
+
+var wrappedFees= fees.map(fee => wrapWithTag(fee,`li`));
+console.log(wrappedFees);
+//console.log(list);
+document.write("<ul>",wrappedFees,"</ul>");
