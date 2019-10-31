@@ -14,3 +14,5 @@
     // your code here
 
 })();
+var str="Hello world!";
+alert(str);
