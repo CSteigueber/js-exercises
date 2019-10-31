@@ -3,8 +3,8 @@ var films=[`Hors Normes`,`The Mustang`,`Joker`,`Downtown Abbey`,`Parasite`,`La R
 `De Leeuwenkoning`];
 
 
-const toLower = (content) => content = content.toLowerCase();
+//const toLower = (content) => content = content.toLowerCase();
 const wrapWithTag = (content, tag)=> `<${tag}>${content}</${tag}>`;
-fimls= films.map(film => toLower(film));
+films= films.map(film => film.toLowerCase());
 films= films.map(film => wrapWithTag(film,`li`));
 document.write(wrapWithTag(films.join(``),`ul`));
