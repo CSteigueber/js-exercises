@@ -14,3 +14,11 @@
   // your code here
 
 })();
+var cake=prompt("Do you want cake?");
+cake=cake.toLowerCase();
+if (cake=="yes"){
+  alert("Congratulation! Good choice!");
+}
+else {
+  alert("More cake for me :p !");
+}
