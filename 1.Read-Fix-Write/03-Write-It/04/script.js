@@ -43,13 +43,12 @@ var winners= [
   ]
   
   const orderByName = (a,b) => {
-      return a.actor - b.actor;
+      return a - b;
   };
 
   const wrapWithTag = (content, tag) => `<${tag}>${content}</${tag}>`;
-console.log(winners);
+
   winners= winners.map(winner => winner.actor.slice(winner.actor.indexOf(" ")));
-  console.log(winners);
- // winners= winners.sort(orderByName);
+  winners= winners.sort(orderByName);
   winners= winners.map(winner => wrapWithTag(winner,`li`));
   document.write(wrapWithTag(winners. join(` `),`ul`));
