@@ -9,10 +9,34 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-function test() {
-    return true;
+function calculator(operator) {
+    var a=parseInt(document.getElementById("op-one").value);
+    var b=parseInt(document.getElementById("op-two").value);
+    var res=0;
+    switch (operator){
+        case "+":
+            res=a + b;
+            break;
+        case "-":
+            res=a - b;
+            break;
+        case "*":
+            res=a * b;
+            break;
+        case "/":
+            res=a / b;
+            break;
+    }
+    console.log("I just used "+operator);
+    return res;
 }
-
 (function() {
-    return true;
+    document.getElementById("addition").addEventListener("click",alert(calculator("+")));
+    console.log("Chill bro! Stop right there!");
+    document.getElementById("substraction").addEventListener("click",alert(calculator("-")));
+    console.log("Chill bro! Stop right there!");
+    document.getElementById("multiplication").addEventListener("click",alert(calculator("*")));
+    console.log("Chill bro! Stop right there!");
+    document.getElementById("division").addEventListener("click",alert(calculator("/")));
+    console.log("Chill bro! Stop right there!");
 })();
