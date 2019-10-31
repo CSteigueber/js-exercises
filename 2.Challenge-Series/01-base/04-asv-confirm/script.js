@@ -14,3 +14,10 @@
     // your code here
 
 })();
+do{
+    var age=prompt("What is your age?");
+    var gender=prompt("What is your gender?");
+    var home=prompt( "Where do you live?");
+    var result=confirm(`You are ${age} years old, ${gender} and live in ${home}. Is that correct?`);
+}
+while (result==false);
