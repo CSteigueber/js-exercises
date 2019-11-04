@@ -23,7 +23,12 @@
         "raisin",
         "cerise",
     ];
-
+    document.getElementById("run").addEventListener("click", function(){
+        fruits=fruits.slice(1,-1);
+        fruits.unshift("banana");
+        fruits.push("kiwi");
+        alert(fruits);
+    })
     // your code here
 
 })();
