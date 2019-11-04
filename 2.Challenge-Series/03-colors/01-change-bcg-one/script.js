@@ -9,7 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+function changeBgc(col){
+    document.body.style.backgroundColor=col;
+}
+
 (function() {
+    document.getElementById("red").addEventListener("click", function(){
+        changeBgc("red");
+    });
+    document.getElementById("green").addEventListener("click", function(){
+        changeBgc("green");
+    });
+    document.getElementById("yellow").addEventListener("click", function(){
+        changeBgc("yellow");
+    });
+    document.getElementById("blue").addEventListener("click", function(){
+        changeBgc("blue");
+    });
+
 
     // your code here
 
