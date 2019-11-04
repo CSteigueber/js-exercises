@@ -14,6 +14,12 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let arr=[];
+        for (let x=1; x*x<=21;x++){
+            arr.push(x*x);
+
+        }
+        alert(arr);
 
     });
 
