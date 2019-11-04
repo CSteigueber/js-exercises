@@ -8,6 +8,11 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+function factorial (a){
+    console.log(a);
+    if (a==1) return 1;
+    else return a*factorial(a-1);
+}
 
 (function() {
     
@@ -16,6 +21,9 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let x=document.getElementById("number").value;
+        alert(factorial(x));
+
 
     });
 
