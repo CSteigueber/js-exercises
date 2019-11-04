@@ -28,15 +28,18 @@ function calculator(operator) {
             break;
     }
     console.log("I just used "+operator);
-    return res;
+    alert(res);
 }
-(function() {
-    document.getElementById("addition").addEventListener("click",alert(calculator("+")));
-    console.log("Chill bro! Stop right there!");
-    document.getElementById("substraction").addEventListener("click",alert(calculator("-")));
-    console.log("Chill bro! Stop right there!");
-    document.getElementById("multiplication").addEventListener("click",alert(calculator("*")));
-    console.log("Chill bro! Stop right there!");
-    document.getElementById("division").addEventListener("click",alert(calculator("/")));
-    console.log("Chill bro! Stop right there!");
-})();
+function buttons() {
+    console.log("Howdie partner!");
+   let add= document.getElementById("addition");
+   add.addEventListener("click",alert(calculator("+")));
+    let sub= document.getElementById("substraction");
+    sub.addEventListener("click",alert(calculator("-")));
+    let mul=document.getElementById("multiplication");
+    mul.addEventListener("click",alert(calculator("*")));
+    let div=document.getElementById("division");
+    div.addEventListener("click",alert(calculator("/")));
+}
+
+buttons ();
