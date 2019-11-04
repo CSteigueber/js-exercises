@@ -14,18 +14,11 @@
     // to get the value of an input: document.getElementById("element-id").value
 
     let str= document.getElementById("numbers").value;
-    let arr=[];
-    for (let i=0; i<str.length; i++){
-        arr[i]=parseInt(str[i]);
-    }
+    let arr=str.split(",");
     document.getElementById("run").addEventListener("click", function() {
         // your code here
-        console.log(arr);
         arr=arr.sort(function (a,b){return a-b});
-        console.log(arr);
         alert(arr);
-       /* let el=document.getElementById("numbers");
-        el.innerHTML="Howdie, partner!";*/
     });
 
 })();
