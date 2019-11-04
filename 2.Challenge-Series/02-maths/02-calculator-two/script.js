@@ -12,34 +12,35 @@
 function calculator(operator) {
     var a=parseInt(document.getElementById("op-one").value);
     var b=parseInt(document.getElementById("op-two").value);
-    var res=0;
     switch (operator){
         case "+":
-            res=a + b;
+            alert(a + b);
             break;
         case "-":
-            res=a - b;
+            alert(a - b);
             break;
         case "*":
-            res=a * b;
+            alert(a * b);
             break;
         case "/":
-            res=a / b;
+            alert(a / b);
             break;
     }
-    console.log("I just used "+operator);
-    alert(res);
-}
-function buttons() {
-    console.log("Howdie partner!");
-   let add= document.getElementById("addition");
-   add.addEventListener("click",alert(calculator("+")));
-    let sub= document.getElementById("substraction");
-    sub.addEventListener("click",alert(calculator("-")));
-    let mul=document.getElementById("multiplication");
-    mul.addEventListener("click",alert(calculator("*")));
-    let div=document.getElementById("division");
-    div.addEventListener("click",alert(calculator("/")));
-}
 
-buttons ();
+}
+(function buttons() {
+   let add= document.getElementById("addition");
+   add.addEventListener("click", function (){calculator("+")});
+
+    let sub= document.getElementById("substraction");
+    sub.addEventListener("click", function (){calculator("-")});
+
+    let mul=document.getElementById("multiplication");
+    mul.addEventListener("click", function (){calculator("*")});
+
+    let div=document.getElementById("division");
+    div.addEventListener("click", function (){calculator("/")});
+})();
+
+//addEventListener fires unintentionally when I use a function reference alone. If I use an anonymous function which calls a function reference all is fine.
+// Devil knows why...
