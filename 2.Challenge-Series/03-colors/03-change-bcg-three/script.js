@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    document.getElementById('run').addEventListener("click", function (){
+        let x=[];
+        for (let i=0; i<6; i++){
+            x[i]=Math.floor(Math.random()*16).toString(16);
+        }
+        console.log(x);
+
+        let str=x.join("");
+        console.log(str);
+        document.body.style.backgroundColor="#"+str;
+    })
 
 })();
