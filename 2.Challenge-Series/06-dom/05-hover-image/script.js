@@ -10,7 +10,13 @@
 // You will have time to focus on it later.
 
 (function() {
+    var element=document.getElementsByTagName("img")[0];
+    var att=element.getAttribute("data-hover");
+    console.log(att);
+    element.addEventListener("mouseover", function(){
+        element.setAttribute("src",att);
 
+    })
     // your code here
 
 })();
