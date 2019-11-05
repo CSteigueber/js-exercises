@@ -12,5 +12,8 @@
 (function() {
 
     // your code here
-
+    let x=document.getElementById("source").getAttribute("data-image");
+    console.log(x);
+    document.getElementsByClassName("material")[0].removeChild(document.getElementById("source"));
+    document.getElementById("target").innerHTML="<img src='"+x+"'>";
 })();
