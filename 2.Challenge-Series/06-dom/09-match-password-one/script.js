@@ -12,5 +12,10 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function(){
+        let pas_one= document.getElementById("pass-one").value;
+        let pas_two= document.getElementById("pass-two").value;
+            pas_one==pas_two? console.log("fine"):document.getElementById("pass-two").setAttribute("bordercolor","red");
+    });
 
 })();
