@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+        let pas_one=document.getElementById("pass-one");
+        let pas_two=document.getElementById("pass-two");
+        if (pas_one.value!=pas_two.value){
+            pas_one.setAttribute("class",pas_one.getAttribute("class")+" error");
+            pas_two.setAttribute("class",pas_two.getAttribute("class")+" error");
+        }
+    })
 
 })();
