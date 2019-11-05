@@ -30,7 +30,6 @@ const wrapTagNFont =(content, font, tag)=>{
        arr.push(wrapTagNFont(temp, font,"span"));
 
     }
-    console.log(arr);
     document.getElementById("target").innerHTML=arr.join("");
 
     // your code here
