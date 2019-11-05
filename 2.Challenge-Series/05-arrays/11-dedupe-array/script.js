@@ -36,6 +36,7 @@
         for (let i=0; i<fruits.length; i++){
             if (new_arr.indexOf(fruits[i])==-1) new_arr.push(fruits[i]);
         }
+        console.log(new Set(fruits));
         console.log("Witht the for loop:");
         console.log(new_arr);
     })
