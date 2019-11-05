@@ -88,7 +88,11 @@
             age: 81,
         },
     ];
-
+const getSum = (total, num)=>{
+    return total+num.age;
+}
     // your code here
-
+    document.getElementById("run").addEventListener("click", function(){
+        console.log(people.reduce(getSum,0));
+    })
 })();
