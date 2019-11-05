@@ -10,7 +10,8 @@
 // You will have time to focus on it later.
 
 (function() {
-
+    let arr=document.getElementsByTagName("p");
+    arr[1].innerHTML="Owned!";
     // your code here
 
 })();
