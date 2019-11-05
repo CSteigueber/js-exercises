@@ -12,5 +12,10 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").addEventListener("input", function () {
+        let input=document.getElementById("pass-one").value;
+        document.getElementById("counter").innerHTML=`${input.length}/10`;
+        if (input.length>=10) document.getElementById("pass-one").disabled=true;
+    })
 
 })();
