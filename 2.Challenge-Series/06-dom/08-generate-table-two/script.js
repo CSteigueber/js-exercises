@@ -9,8 +9,25 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+const wrapWithTags=(content, tag)=>{
+    return `<${tag}>${content}</${tag}>`;
+}
+
+const createTable = ()=>{
+    let str="";
+    for (let i=1; i<=10;i++){
+        str+="<tr>";
+        for (let ii=1; ii<=10;ii++){
+            str+=`<td>${i*ii}</td>`;
+        }
+        str+="</tr>";
+    }
+    return str;
+}
+
 (function() {
 
     // your code here
-
+    var el=document.getElementById("target");
+    el.innerHTML=wrapWithTags(createTable(),"table");
 })();
