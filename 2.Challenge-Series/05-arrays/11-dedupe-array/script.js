@@ -29,5 +29,15 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function (){
+        console.log("Using the Set object, which I don't understand right now:");
+        console.log(Array.from(new Set(fruits)));
+        let new_arr=[];
+        for (let i=0; i<fruits.length; i++){
+            if (new_arr.indexOf(fruits[i])==-1) new_arr.push(fruits[i]);
+        }
+        console.log("Witht the for loop:");
+        console.log(new_arr);
+    })
 
 })();
