@@ -30,7 +30,7 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", function (){
-        console.log("Using the Set object, which I don't understand right now:");
+        console.log("Using the Set object:");
         console.log(Array.from(new Set(fruits)));
         let new_arr=[];
         for (let i=0; i<fruits.length; i++){
