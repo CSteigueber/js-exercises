@@ -90,5 +90,12 @@
     ];
 
     // your code here
+    function checkAge (person){
+        return person.age>=18;
+    }
+    document.getElementById("run").addEventListener("click", function (){
+        console.log(people.filter(checkAge));
+
+    })
 
 })();
