@@ -10,7 +10,10 @@
 // You will have time to focus on it later.
 
 (function() {
-
+    let arr=document.getElementsByClassName("target");
+    for (let i=0; i<arr.length;i++){
+        arr[i].innerHTML="Owned!";
+    }
     // your code here
 
 })();
