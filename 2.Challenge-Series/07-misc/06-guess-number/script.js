@@ -12,5 +12,20 @@
 (function() {
 
     // your code here
+    var trys=0;
+    var x=Math.ceil(Math.random()*100);
+    var input=0;
+    console.log(x);
+    do{
+        input=prompt("Guess thenumber!");
+        trys++;
+        switch (true){
+           case input==x: alert("That's it! You needed "+trys+" guesses"); break;        
+           case input>x:  alert("lower");                                  break;        
+           case input<x:  alert("higher");                                 break;
+        }
+    
+    }
+    while (input!=x);
 
 })();
