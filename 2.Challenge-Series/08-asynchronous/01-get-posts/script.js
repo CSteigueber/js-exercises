@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+       window.lib.getPosts(function (error, x){
+           if (error) console.log("Something went wrong!");
+           else {
+                for (let i=0; i<x.length; i++){   
+                    console.log(x[i].content);
+                }
+           }
+        });
+    })
 })();
