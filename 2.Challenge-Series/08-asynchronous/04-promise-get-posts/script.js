@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        var promise1= new Promise(window.lib.getPosts(resolve, reject));
+
+        
+    })
 })();
