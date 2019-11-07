@@ -9,6 +9,19 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
+async function posts (){
+    res=await window.lib.getPosts();
+    return res;
+}
+
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", async ()=>{
+        var arr= await posts();
+       // console.table(arr);
+        arr.forEach(async function (element){
+            let comment= await window.lib.getComments(element.id);
+            console.log(comment);
+        });
+    })
 })();
