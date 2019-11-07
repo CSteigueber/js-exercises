@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", ()=>{
+        var promise1=window.lib.getPosts();
+        promise1.then((arr)=>{
+            arr.forEach(element => {
+               let promise2=window.lib.getComments(element.id)
+               promise2.then((res)=>{
+                   console.log(res);
+               }) 
+            });
+        })
+    })
 })();
