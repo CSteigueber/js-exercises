@@ -8,12 +8,17 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
-
+var arr=0;
 (() => {
     // your code here
     document.getElementById("run").addEventListener("click", ()=>{
-        var promise1= new Promise(window.lib.getPosts(resolve, reject));
-
+        var promise=window.lib.getPosts();
+        promise.then(function(arr){
+            console.table(arr);
+        })
+       
+       
+    
         
     })
 })();
