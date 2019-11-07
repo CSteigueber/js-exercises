@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click",()=>{
+        var promise=window.lib.getPersons();
+        promise.then((arr)=>{
+            console.table(arr);
+        })
+        promise.catch((err)=>{
+            console.log(err);
+        })
+    })
 })();
