@@ -8,7 +8,14 @@
 
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
+async function posts () {
+    arr=await window.lib.getPosts();
+    console.table(arr);
+}
 
 (() => {
-    // your code here
+    // your code her
+    document.getElementById("run").addEventListener("click",()=>{
+        posts();
+    })
 })();
