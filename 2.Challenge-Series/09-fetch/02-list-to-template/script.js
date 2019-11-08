@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click",async function(){
+        var arr= await fetch("../../_shared/api.json");
+        var preHeroes= await arr.json("/heroes");
+        //console.table(heroes.heroes);
+        var heroes=preHeroes.heroes;
+        //console.log(heroes[1]);
+        var str="";
+        heroes.forEach(hero => {
+            str+=`<li><h4><strong>${hero.name}`
+        });
+    })
 })();
