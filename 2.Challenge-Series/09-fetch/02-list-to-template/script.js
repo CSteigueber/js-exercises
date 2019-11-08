@@ -17,9 +17,15 @@
         //console.table(heroes.heroes);
         var heroes=preHeroes.heroes;
         //console.log(heroes[1]);
+        var tpl=document.getElementById("tpl-hero").innerHTML;
         var str="";
-        heroes.forEach(hero => {
-            str+=`<li><h4><strong>${hero.name}`
-        });
+        var name_pos=143;
+        var ego_pos=207;
+        var skill_pos=293;
+        console.log(tpl);
+        console.log(tpl.slice(0,name_pos)+heroes[1].name+tpl.slice(name_pos,ego_pos)+heroes[1].alterEgo+tpl.slice(ego_pos,skill_pos)+heroes[1].abilities+tpl.slice(skill_pos,-1));
+       /* heroes.forEach(hero => {
+            str+=;
+        });*/
     })
 })();
