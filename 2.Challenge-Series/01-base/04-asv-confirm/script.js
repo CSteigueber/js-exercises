@@ -9,15 +9,11 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
 
-    // your code here
-
-})();
 do{
     var age=prompt("What is your age?");
     var gender=prompt("What is your gender?");
     var home=prompt( "Where do you live?");
     var result=confirm(`You are ${age} years old, ${gender} and live in ${home}. Is that correct?`);
 }
-while (result==false);
+while (!result);
