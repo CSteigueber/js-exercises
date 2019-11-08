@@ -17,7 +17,7 @@
         var preHeroes= await arr.json("/heroes");
         var hero=preHeroes.heroes;
         //console.table(heroes);
-        var id= document.getElementById("hero-id").value;
+        var id= document.getElementById("hero-id").value-1;
         var tpl=document.getElementById("tpl-hero").innerHTML;
         var str="";
         var name_pos=143;
