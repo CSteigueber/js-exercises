@@ -9,13 +9,15 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
+
+
+(async function() {
     // your code here
+    var arr = await fetch("../../_shared/api.json");
+    var preHeroes=await arr.json("/heroes");
+    var heroes=preHeroes.heroes;
     document.getElementById("run").addEventListener("click",async function(){
 
-           var arr = await fetch("../../_shared/api.json");
-           var preHeroes=await arr.json("/heroes");
-           var heroes=preHeroes.heroes;
 
        
         var h_name=document.getElementById("hero-name").value;
