@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click",async function() {
+        var arr= await fetch("../../_shared/api.json"); 
+        var heroes= await arr.json();
+        console.table(heroes);
+    })
 })();
