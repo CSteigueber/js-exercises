@@ -11,4 +11,20 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click",async function(){
+
+           var arr = await fetch("../../_shared/api.json");
+           var preHeroes=await arr.json("/heroes");
+           var heroes=preHeroes.heroes;
+
+       
+        var h_name=document.getElementById("hero-name").value;
+        var h_ego= document.getElementById("hero-alter-ego").value;
+        var h_powers= document.getElementById("hero-powers").value.split(",");
+        var hero= {id: heroes.length+1, name:h_name, alterEgo:h_ego, abilities:h_powers};
+        heroes.push(hero);
+        console.table(heroes);
+
+
+    })
 })();
