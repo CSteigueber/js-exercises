@@ -22,10 +22,9 @@
         var name_pos=143;
         var ego_pos=207;
         var skill_pos=293;
-        console.log(tpl);
-        console.log(tpl.slice(0,name_pos)+heroes[1].name+tpl.slice(name_pos,ego_pos)+heroes[1].alterEgo+tpl.slice(ego_pos,skill_pos)+heroes[1].abilities+tpl.slice(skill_pos,-1));
-       /* heroes.forEach(hero => {
-            str+=;
-        });*/
+        heroes.forEach(hero => {
+            str+=tpl.slice(0,name_pos)+hero.name+tpl.slice(name_pos, ego_pos)+hero.alterEgo+tpl.slice(ego_pos,skill_pos)+hero.abilities+tpl.slice(skill_pos,0);
+        });
+        document.getElementById("target").innerHTML=str;
     })
 })();
