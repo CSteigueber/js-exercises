@@ -12,19 +12,18 @@ const randomize =()=>{
         switch (true){
             case b[0]&&(i==0): 
                 v[0].setAttribute("value",Math.ceil((Math.random()*(max[0]-min[0]))+min[0]));
-                if (v[0].getAttribute("value"<10)){v[0]="0"+v[0];}
             break;
             case b[1]&&(i==1): 
                 v[1].setAttribute("value",Math.ceil((Math.random()*(max[1]-min[1]))+min[1]));
-                if (v[1].getAttribute("value"<10)){v[1]="0"+v[1];}
+                if (v[1].getAttribute("value")<10) {v[1].setAttribute("value","0"+v[1].getAttribute("value"));}
             break;
             case b[2]&&(i==2): 
                 v[2].setAttribute("value",Math.ceil((Math.random()*(max[2]-min[2]))+min[2]));
-                if (v[2].getAttribute("value"<10)){v[2]="0"+v[2];}
+                if (v[2].getAttribute("value")<10) {v[2].setAttribute("value","0"+v[2].getAttribute("value"));}
             break;
             case b[3]&&(i==3): 
                 v[3].setAttribute("value",Math.ceil((Math.random()*(max[3]-min[3]))+min[3]));
-                if (v[3].getAttribute("value"<10)){v[3]="0"+v[3];}
+                if (v[3].getAttribute("value")<10) {v[3].setAttribute("value","0"+v[3].getAttribute("value"));}
             break;
         }
     }
@@ -54,7 +53,13 @@ const set_buttons =()=>{
 }
 
 const printTarget =()=>{
-    console.log(b);
+    if (!(b[0]||b[1]||b[2]||b[3])){
+        let res="";
+        for (i=0;i<v.length;i++){
+            res+=v[i].getAttribute("value");
+        }
+        document.getElementById("target").innerHTML="+"+res;
+    }
 }
 
 
