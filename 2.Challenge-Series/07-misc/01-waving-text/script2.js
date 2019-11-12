@@ -33,7 +33,7 @@ const waveMaker =(str, index)=>{
     setInterval(() => {
         waveMaker(str,pos);
         pos++;
-        if (pos==str.length){
+        if (pos==str.length+13){
             pos=0;
         }
         console.log(pos);
