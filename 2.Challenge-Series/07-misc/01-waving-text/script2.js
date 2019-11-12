@@ -1,4 +1,3 @@
-var fonts=[];
 var pos=-13;
 
 const wrapTagNFont =(content, font, tag)=>{
