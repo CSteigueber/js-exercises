@@ -1,5 +1,5 @@
 var fonts=[];
-var pos=0;
+var pos=-13;
 
 const wrapTagNFont =(content, font, tag)=>{
     return `<${tag} style="font-size: ${font}px;">${content}</${tag}>`;
@@ -34,7 +34,7 @@ const waveMaker =(str, index)=>{
         waveMaker(str,pos);
         pos++;
         if (pos==str.length+13){
-            pos=0;
+            pos=-13;
         }
         console.log(pos);
     }, 75);
