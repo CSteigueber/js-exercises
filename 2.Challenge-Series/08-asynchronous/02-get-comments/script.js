@@ -16,13 +16,18 @@
             if (error) console.log("Something went wrong!");
             else{
                 arr.forEach(element => {
-                    window.lib.getComments(element.id,(error, comment)=>{
+                    window.lib.getComments(element.id,(error, comment_obj)=>{
+                        let comment=[];
                         if (error) console.log("Something went wrong!");
                         else {
-                            console.log(comment);
+                        comment_obj.forEach(element => {
+                            comment.push(element.content);
+                        });
                         }
+                        element.comment=comment;
                     })
                 });
+            console.log(arr);
             }
         })
     })
