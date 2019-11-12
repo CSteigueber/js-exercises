@@ -20,8 +20,13 @@ async function posts (){
         var arr= await posts();
        // console.table(arr);
         arr.forEach(async function (element){
-            let comment= await window.lib.getComments(element.id);
-            console.log(comment);
+            var comments=[];
+            let comment_obj= await window.lib.getComments(element.id);
+            comment_obj.forEach(el => {
+                comments.push(el.content);
+            });
+            element.comment=comments;
+            console.log(element);
         });
     })
 })();
