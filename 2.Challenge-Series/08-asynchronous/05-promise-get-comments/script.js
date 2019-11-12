@@ -15,10 +15,15 @@
         var promise1=window.lib.getPosts();
         promise1.then((arr)=>{
             arr.forEach(element => {
+               var comments=[]
                let promise2=window.lib.getComments(element.id)
                promise2.then((res)=>{
-                   console.log(res);
-               }) 
+                   res.forEach(el => {
+                       comments.push(el.content);
+                   });
+               })
+               element.comment=comments; 
+               console.log(element);
             });
         })
     })
