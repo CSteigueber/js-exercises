@@ -15,9 +15,10 @@
        window.lib.getPosts(function (error, x){
            if (error) console.log("Something went wrong!");
            else {
-                for (let i=0; i<x.length; i++){   
+                /*for (let i=0; i<x.length; i++){   
                     console.log(x[i].content);
-                }
+                }*/
+                console.table(x);
            }
         });
     })
